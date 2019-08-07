@@ -10,57 +10,34 @@
  *******************************************************************************/
 package it.io.openliberty.sample.health;
 
-import org.junit.After;
 import org.junit.Test;
 
 import javax.json.JsonArray;
-import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
 public class HealthIT {
 
-    private JsonArray servicesStates;
-    private static HashMap<String, String> dataWhenServicesUP, dataWhenServicesDown;
-
-    static {
-        dataWhenServicesUP = new HashMap<>();
-        dataWhenServicesDown = new HashMap<>();
-
-
-        dataWhenServicesUP.put("SystemResource", "UP");
-
-
-        dataWhenServicesDown.put("SystemResource", "DOWN");
-
-    }
+    private static Map<String, String> dataWhenServicesUP = Map.of("SystemResource", "UP");
 
     @Test
     public void testIfServicesAreUp() {
-        servicesStates = HealthTestUtil.connectToHealthEnpoint(200);
+        JsonArray servicesStates = HealthTestUtil.connectToHealthEndpoint(200);
         checkServicesStates(dataWhenServicesUP, servicesStates);
     }
 
     @Test
     public void testIfServicesAreDown() {
-        servicesStates = HealthTestUtil.connectToHealthEnpoint(200);
+        JsonArray servicesStates = HealthTestUtil.connectToHealthEndpoint(200);
         checkServicesStates(dataWhenServicesUP, servicesStates);
-        HealthTestUtil.changeProperty(HealthTestUtil.INV_MAINTENANCE_FALSE, HealthTestUtil.INV_MAINTENANCE_TRUE);
-        //servicesStates = HealthTestUtil.connectToHealthEnpoint(503);
-        //checkServicesStates(dataWhenServicesDown, servicesStates);
     }
 
-    private void checkServicesStates(HashMap<String, String> testData, JsonArray servicesStates) {
-        testData.forEach((service, expectedState) -> {
-            assertEquals("The state of " + service + " service is not matching the ", expectedState,
-                    HealthTestUtil.getActualState(service, servicesStates));
-        });
+    private void checkServicesStates(Map<String, String> testData, JsonArray servicesStates) {
+        testData.forEach((service, expectedState) ->
+                assertEquals("The state of " + service + " service is not matching the ", expectedState,
+                        HealthTestUtil.getActualState(service, servicesStates))
+        );
 
     }
-
-    @After
-    public void teardown() {
-        HealthTestUtil.cleanUp();
-    }
-
 }
