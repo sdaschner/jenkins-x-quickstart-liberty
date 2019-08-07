@@ -34,6 +34,12 @@ final class HealthTestUtil {
     static JsonArray connectToHealthEndpoint(int expectedResponseCode) {
         String healthURL = baseUrl + HEALTH_ENDPOINT;
         Client client = ClientBuilder.newClient().register(JsrJsonpProvider.class);
+
+        System.out.println("waiting for 10 secs, just to be sure");
+        try {
+            Thread.sleep(10_000);
+        } catch (InterruptedException e) {}
+
         Response response = client.target(healthURL).request().get();
         assertEquals("Response code is not matching " + healthURL, expectedResponseCode, response.getStatus());
         JsonObject entity = response.readEntity(JsonObject.class);
