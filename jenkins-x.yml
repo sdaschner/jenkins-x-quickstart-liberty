@@ -1,9 +1,9 @@
 buildPack: liberty
-pipelineConfig:
-  pipelines:
-    release:
-      build:
-        replace: true
-        steps:
-        - sh: mvn clean package
-          name: mvn-package
+#pipelineConfig:
+#  pipelines:
+#    release:
+#      build:
+#        replace: true
+#        steps:
+#        - sh: mvn clean package
+#          name: mvn-package
