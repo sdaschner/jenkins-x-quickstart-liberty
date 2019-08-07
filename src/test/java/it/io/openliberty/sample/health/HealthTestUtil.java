@@ -38,6 +38,10 @@ final class HealthTestUtil {
         assertEquals("Response code is not matching " + healthURL, expectedResponseCode, response.getStatus());
         JsonArray servicesStates = response.readEntity(JsonObject.class).getJsonArray("checks");
         client.close();
+
+        System.out.println(">>>");
+        System.out.println(servicesStates);
+
         return servicesStates;
     }
 
