@@ -36,8 +36,13 @@ final class HealthTestUtil {
         Client client = ClientBuilder.newClient().register(JsrJsonpProvider.class);
         Response response = client.target(healthURL).request().get();
         assertEquals("Response code is not matching " + healthURL, expectedResponseCode, response.getStatus());
-        JsonArray servicesStates = response.readEntity(JsonObject.class).getJsonArray("checks");
+        JsonObject entity = response.readEntity(JsonObject.class);
         client.close();
+
+        System.out.println(">>>");
+        System.out.println(entity);
+
+        JsonArray servicesStates = entity.getJsonArray("checks");
 
         System.out.println(">>>");
         System.out.println(servicesStates);
