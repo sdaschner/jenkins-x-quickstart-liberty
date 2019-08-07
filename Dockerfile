@@ -1,4 +1,5 @@
-FROM open-liberty:microProfile1
+FROM open-liberty:javaee8-java12
 
-COPY target/liberty/wlp/usr/servers/sampleAppServer /config/
-COPY target/*.war /config/apps/io.openliberty.sample.getting.started.war
+COPY src/main/liberty/config/* /config/
+
+COPY target/*.war /config/dropins/
