@@ -27,11 +27,11 @@ public class HealthIT {
         checkServicesStates(dataWhenServicesUP, servicesStates);
     }
 
-    @Test
-    public void testIfServicesAreDown() {
-        JsonArray servicesStates = HealthTestUtil.connectToHealthEndpoint(200);
-        checkServicesStates(dataWhenServicesUP, servicesStates);
-    }
+//    @Test
+//    public void testIfServicesAreDown() {
+//        JsonArray servicesStates = HealthTestUtil.connectToHealthEndpoint(200);
+//        checkServicesStates(dataWhenServicesUP, servicesStates);
+//    }
 
     private void checkServicesStates(Map<String, String> testData, JsonArray servicesStates) {
         testData.forEach((service, expectedState) ->

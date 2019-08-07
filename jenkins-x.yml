@@ -4,7 +4,7 @@ pipelineConfig:
     release:
       build:
         steps:
-        - sh: mvn liberty:start-server failsafe:integration-test liberty:stop-server failsafe:verify
+        - sh: mvn package liberty:start-server failsafe:integration-test liberty:stop-server failsafe:verify
           name: mvn-liberty-integration-test
   agent:
-    container:  maven-java11
+    container: maven-java11
