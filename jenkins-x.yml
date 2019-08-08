@@ -6,5 +6,9 @@ pipelineConfig:
         steps:
         - sh: mvn liberty:create-server liberty:install-feature liberty:install-apps liberty:start-server failsafe:integration-test liberty:stop-server failsafe:verify
           name: mvn-liberty-integration-test
+      promote:
+        steps:
+        - sh: mvn mvn failsafe:integration-test failsafe:verify -Dliberty.test.host=jenkins-x-quickstart-liberty.jx-production.34.90.141.229.nip.io -Dliberty.test.port=80
+          name: system-test
   agent:
     container: maven-java11
