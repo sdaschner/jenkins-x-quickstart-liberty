@@ -21,8 +21,8 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: jenkins-x-quickstart-liberty
-        chartPath: charts/jenkins-x-quickstart-liberty
+      - name: liberty
+        chartPath: charts/liberty
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'
           image.tag: '{{.DIGEST_HEX}}'
