@@ -1,6 +1,6 @@
 apiVersion: v1
-appVersion: 1.0.35
+appVersion: 1.0.36
 description: A Helm chart for Kubernetes
 icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/master/images/liberty.png
 name: jenkins-x-quickstart-liberty
-version: 1.0.35
+version: 1.0.36
