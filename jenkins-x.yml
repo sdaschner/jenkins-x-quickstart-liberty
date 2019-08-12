@@ -9,7 +9,7 @@ pipelineConfig:
         stages:
         - name: setup
           steps:
-          - groovy: git 'https://REPLACE_ME_GIT_PROVIDER/REPLACE_ME_ORG/REPLACE_ME_APP_NAME.git'
+          - groovy: git 'https://github.com/sdaschner/jenkins-x-quickstart-liberty.git'
 
         - name: build
           steps:
@@ -34,7 +34,7 @@ pipelineConfig:
 
         - name: promote
           steps:
-          - dir: charts/REPLACE_ME_APP_NAME
+          - dir: charts/jenkins-x-quickstart-liberty
             steps:
             - sh: jx step changelog --version v\$(cat ../../VERSION)
               name: changelog
