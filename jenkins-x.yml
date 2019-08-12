@@ -1,4 +1,4 @@
-buildPack: liberty
+buildPack: jenkins-x-quickstart-liberty
 # TODO add preview & PR pipeline
 pipelineConfig:
   pipelines:
