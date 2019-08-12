@@ -1,4 +1,4 @@
-buildPack: liberty
+buildPack: none
 # TODO add preview & PR pipeline
 pipelineConfig:
   pipelines:
