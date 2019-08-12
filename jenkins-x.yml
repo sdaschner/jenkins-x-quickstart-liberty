@@ -1,6 +1,6 @@
 buildPack: liberty-new
 buildPackGitURL: 'https://github.com/sdaschner/jenkins-x-kubernetes.git'
-buildPackGitRef: 'liberty-new'
+buildPackGitRef: 'master'
 #
 #
 #
