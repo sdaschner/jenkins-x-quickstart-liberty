@@ -5,7 +5,7 @@ buildPackGitRef: 'master'
 #
 #
 #
-#pipelineConfig:
+pipelineConfig:
 #
 #  pipelines:
 #    release:
@@ -61,5 +61,5 @@ buildPackGitRef: 'master'
 #          - sh: echo doing system test; sleep 3
 #            name: mvn-liberty-integration-test
 #
-#  agent:
-#    container: maven-java11
+  agent:
+    container: maven-java11
