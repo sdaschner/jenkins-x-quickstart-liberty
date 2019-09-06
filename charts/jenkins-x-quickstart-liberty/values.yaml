@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: 10.103.112.139:5000/sdaschner/jenkins-x-quickstart-liberty
-  tag: 1.0.43
+  tag: 1.0.44
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
