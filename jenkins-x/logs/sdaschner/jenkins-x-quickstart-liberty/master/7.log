@@ -67,47 +67,26 @@ upserted Pipeline *********-jenkins-x-quickstart-d86wg-7
 created PipelineRun *********-jenkins-x-quickstart-d86wg-7
 created PipelineStructure *********-jenkins-x-quickstart-d86wg-7
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-credential-initializer-26crg[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-26crg[0m
 {"level":"warn","ts":1567766326.1930413,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567766326.194195,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-working-dir-initializer-2mlrc[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2mlrc[0m
 {"level":"warn","ts":1567766327.3733385,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567766327.402032,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/jenkins-x-quickstart-liberty\""}
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-place-tools[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-sdaschner-jenkins-x-quickstart-g9c7p[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-g9c7p[0m
 {"level":"warn","ts":1567766335.6962292,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567766338.2437549,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ v1.0.47 in path /workspace/source"}
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:6f0bf38c1a215597ce36b75dfafd52ead1dbe1f6
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-setup-jx-git-credentials[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-mvn-deploy[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
@@ -158,14 +137,8 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] Finished at: 2019-09-06T10:41:25Z
 [INFO] ------------------------------------------------------------------------
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-skaffold-version[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
 v0.31.0
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-container-build[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] Downloading base image open-liberty:javaee8-java12 
@@ -199,14 +172,8 @@ Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [
 2019/09/06 10:41:32 pushed blob: sha256:e122f192bdbadcbb11d4ab5b975e8e85bf05b44b0832972b5a635c5f308afa30
 2019/09/06 10:41:32 10.103.112.139:5000/*********/jenkins-x-quickstart-liberty:1.0.47: digest: sha256:529018112e3bcfc1822054c0a12cdb16077a5399ee15794857108a25ee08ad1a size: 2374
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-post-build[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-changelog[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/jenkins-x-quickstart-liberty to an unshallow repository
@@ -218,9 +185,6 @@ Created Release jenkins-x-quickstart-liberty-1-0-47 resource in namespace **
 Updating PipelineActivity *********-jenkins-x-quickstart-liberty-master-7 with version 1.0.47
 Updated PipelineActivities *********-jenkins-x-quickstart-liberty-master-7 with release notes URL: https://github.com/*********/jenkins-x-quickstart-liberty/releases/tag/v1.0.47
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-helm-release[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
@@ -230,9 +194,6 @@ Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Uploading chart file jenkins-x-quickstart-liberty-1.0.47.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-jx-promote[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-94zrq-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
