@@ -1,0 +1,123 @@
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-vsm44[0m
+{"level":"warn","ts":1567764747.6063855,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567764747.6074893,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-kzn8m[0m
+{"level":"warn","ts":1567764748.907597,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567764748.911744,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-sdaschner-jenkins-x-quicks-jm5k5[0m
+{"level":"warn","ts":1567764754.352203,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567764759.2153409,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ de4eb6003e21558480df108c6a66ffb5505770aa in path /workspace/source"}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:de4eb6003e21558480df108c6a66ffb5505770aa
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: mvn versions:set -DnewVersion=\$(cat VERSION)
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----< io.openliberty.samples:io.openliberty.sample.getting.started >----
+[INFO] Building io.openliberty.sample.getting.started 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ io.openliberty.sample.getting.started ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of io.openliberty.samples:io.openliberty.sample.getting.started:1.0.0 -> 1.0.45
+[INFO] Processing io.openliberty.samples:io.openliberty.sample.getting.started
+[INFO]     Updating project io.openliberty.samples:io.openliberty.sample.getting.started
+[INFO]         from version 1.0.0 to 1.0.45
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.678 s
+[INFO] Finished at: 2019-09-06T10:13:08Z
+[INFO] ------------------------------------------------------------------------
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/jenkins-x-quickstart-liberty/Chart.yaml to 1.0.45
+Updating repository in charts/jenkins-x-quickstart-liberty/values.yaml to 10.103.112.139:5000/*********/jenkins-x-quickstart-liberty
+Updating tag in charts/jenkins-x-quickstart-liberty/values.yaml to 1.0.45
+Tag v1.0.45 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for *********-jenkins-x-quickstart-liberty-master-5
+Applying changes 
+upserted PipelineResource *********-jenkins-x-quickstart for the git repository https://github.com/*********/jenkins-x-quickstart-liberty.git
+upserted Task *********-jenkins-x-quickstart-xx4t4-from-build-pack-5
+upserted Pipeline *********-jenkins-x-quickstart-xx4t4-5
+created PipelineRun *********-jenkins-x-quickstart-xx4t4-5
+created PipelineStructure *********-jenkins-x-quickstart-xx4t4-5
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-z92rg[0m
+{"level":"warn","ts":1567764796.7309592,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567764796.731419,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pdpr2[0m
+{"level":"warn","ts":1567764797.8984396,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567764797.9023144,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/jenkins-x-quickstart-liberty\""}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-vjbnz[0m
+{"level":"warn","ts":1567764816.327188,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567764819.741272,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ v1.0.45 in path /workspace/source"}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:de4eb6003e21558480df108c6a66ffb5505770aa
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-xx4t4-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----< io.openliberty.samples:io.openliberty.sample.getting.started >----
+[INFO] Building io.openliberty.sample.getting.started 1.0.45
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ io.openliberty.sample.getting.started ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ io.openliberty.sample.getting.started ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ io.openliberty.sample.getting.started ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /workspace/source/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.425 s
+[INFO] Finished at: 2019-09-06T10:13:53Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project io.openliberty.sample.getting.started: Fatal error compiling: invalid target release: 11 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-mvn-deploy'. The execution of the pipeline has stopped.[0m
