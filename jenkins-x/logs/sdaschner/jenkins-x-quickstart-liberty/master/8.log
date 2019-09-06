@@ -1,0 +1,206 @@
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-vdgx8[0m
+{"level":"warn","ts":1567769307.4481518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567769307.4523678,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-bdvxs[0m
+{"level":"warn","ts":1567769308.795572,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567769308.7997718,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-sdaschner-jenkins-x-quicks-c98x6[0m
+{"level":"warn","ts":1567769314.788251,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567769317.9289093,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ 6f0bf38c1a215597ce36b75dfafd52ead1dbe1f6 in path /workspace/source"}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6f0bf38c1a215597ce36b75dfafd52ead1dbe1f6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: mvn versions:set -DnewVersion=\$(cat VERSION)
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----< io.openliberty.samples:io.openliberty.sample.getting.started >----
+[INFO] Building io.openliberty.sample.getting.started 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ io.openliberty.sample.getting.started ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of io.openliberty.samples:io.openliberty.sample.getting.started:1.0.0 -> 1.0.48
+[INFO] Processing io.openliberty.samples:io.openliberty.sample.getting.started
+[INFO]     Updating project io.openliberty.samples:io.openliberty.sample.getting.started
+[INFO]         from version 1.0.0 to 1.0.48
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.872 s
+[INFO] Finished at: 2019-09-06T11:29:17Z
+[INFO] ------------------------------------------------------------------------
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/jenkins-x-quickstart-liberty/Chart.yaml to 1.0.48
+Updating repository in charts/jenkins-x-quickstart-liberty/values.yaml to 10.103.112.139:5000/*********/jenkins-x-quickstart-liberty
+Updating tag in charts/jenkins-x-quickstart-liberty/values.yaml to 1.0.48
+Tag v1.0.48 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for *********-jenkins-x-quickstart-liberty-master-8
+Applying changes 
+upserted PipelineResource *********-jenkins-x-quickstart for the git repository https://github.com/*********/jenkins-x-quickstart-liberty.git
+upserted Task *********-jenkins-x-quickstart-gp4b8-from-build-pack-8
+upserted Pipeline *********-jenkins-x-quickstart-gp4b8-8
+created PipelineRun *********-jenkins-x-quickstart-gp4b8-8
+created PipelineStructure *********-jenkins-x-quickstart-gp4b8-8
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9rl6n[0m
+{"level":"warn","ts":1567769365.2624152,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567769365.2632918,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-p62gn[0m
+{"level":"warn","ts":1567769366.7075412,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567769366.710205,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/jenkins-x-quickstart-liberty\""}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-mvkmv[0m
+{"level":"warn","ts":1567769395.9816885,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567769400.7755165,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ v1.0.48 in path /workspace/source"}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6f0bf38c1a215597ce36b75dfafd52ead1dbe1f6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----< io.openliberty.samples:io.openliberty.sample.getting.started >----
+[INFO] Building io.openliberty.sample.getting.started 1.0.48
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ io.openliberty.sample.getting.started ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ io.openliberty.sample.getting.started ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ io.openliberty.sample.getting.started ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ io.openliberty.sample.getting.started ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ io.openliberty.sample.getting.started ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ io.openliberty.sample.getting.started ---
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ io.openliberty.sample.getting.started ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [io.openliberty.sample.getting.started] in [/workspace/source/target/getting-started]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/workspace/source/src/main/webapp]
+[INFO] Webapp assembled in [101 msecs]
+[INFO] Building war: /workspace/source/target/getting-started.war
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ io.openliberty.sample.getting.started ---
+[INFO] Installing /workspace/source/target/getting-started.war to /root/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.48/io.openliberty.sample.getting.started-1.0.48.war
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.48/io.openliberty.sample.getting.started-1.0.48.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ io.openliberty.sample.getting.started ---
+[INFO] Using alternate deployment repository nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25.122 s
+[INFO] Finished at: 2019-09-06T11:30:53Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v0.31.0
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image open-liberty:javaee8-java12 
+2019/09/06 11:30:55 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0005] Error while retrieving image from cache: getting file info: stat /workspace/sha256:818618bbeba1e2f00e61628f019c8fc215194b1a8605c344e7e9634d21eaa724: no such file or directory 
+[36mINFO[0m[0005] Downloading base image open-liberty:javaee8-java12 
+2019/09/06 11:31:00 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0010] Using files from context: [/workspace/source/src/main/liberty/config] 
+[36mINFO[0m[0010] Using files from context: [/workspace/source/target/getting-started.war] 
+[36mINFO[0m[0010] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0010] Taking snapshot of full filesystem...        
+[36mINFO[0m[0010] Using files from context: [/workspace/source/src/main/liberty/config] 
+[36mINFO[0m[0010] COPY src/main/liberty/config/ /opt/ol/wlp/usr/servers/defaultServer/ 
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] Using files from context: [/workspace/source/target/getting-started.war] 
+[36mINFO[0m[0010] COPY target/*.war /opt/ol/wlp/usr/servers/defaultServer/apps/ 
+[36mINFO[0m[0010] Taking snapshot of files...                  
+2019/09/06 11:31:06 existing blob: sha256:4dfc4d19ec09d161af1cb55a4d50dc1457b2108b9a8d8e362dfa17f288775a4e
+2019/09/06 11:31:06 existing blob: sha256:d73076d3446778bb867042dc2c17abb4e6aa7effaa42a8e8a912b6ce5ff20d63
+2019/09/06 11:31:06 existing blob: sha256:6296e1bb66dc3d4c9b18346282743a052a31425602c2843488d166eee445c6c1
+2019/09/06 11:31:06 existing blob: sha256:0e4433763ebd5f15207d4b05aeff8e1355eacb04bf26d5ff8e695d51aeb04da6
+2019/09/06 11:31:06 existing blob: sha256:251f5509d51d9e4119d4ffb70d4820f8e2d7dc72ad15df3ebd7cd755539e40fd
+2019/09/06 11:31:06 existing blob: sha256:35c102085707f703de2d9eaad8752d6fe1b8f02b5d2149f1d8357c9cc7fb7d0a
+2019/09/06 11:31:06 existing blob: sha256:347e01a855f73eb8be54bf681512649259f88b7726a3ecff770d6c37a7064a01
+2019/09/06 11:31:06 existing blob: sha256:aea02ce38ae4a17b5876989281b072c38eb050ace513d0132dc2feed7052be71
+2019/09/06 11:31:06 existing blob: sha256:8e829fe70a46e3ac4334823560e98b257234c23629f19f05460e21a453091e6d
+2019/09/06 11:31:06 existing blob: sha256:49295895fbbbe04500c62b5108f9dbd96df7b9a2f60a180dc1a0d5f6fee32b8a
+2019/09/06 11:31:06 existing blob: sha256:6001e1789921cf851f6fb2e5fe05be70f482fe9c2286f66892fe5a3bc404569c
+2019/09/06 11:31:06 pushed blob: sha256:288329c1fb91e073c38f977415713d2eabc1ea23510cc1715ff166dfab87067b
+2019/09/06 11:31:06 pushed blob: sha256:3084481e40dec5e99451f5a3dfbd168159734116e2464abc1e311b65b73a0462
+2019/09/06 11:31:06 pushed blob: sha256:81e480b5b6326e1f803a86852ebb5b3791996d200fb9011469f4b1dd6b160e49
+2019/09/06 11:31:06 10.103.112.139:5000/*********/jenkins-x-quickstart-liberty:1.0.48: digest: sha256:4711a06ba8b0721dddca910fdacbc591d39e60620b5c188af763cda42fe833ec size: 2374
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/jenkins-x-quickstart-liberty to an unshallow repository
+Generating change log from git ref cee22303d6e9dc50bf82f7a4f5bbd2f57ce43ae9 => 46be36f4b66abae34af3b04ac94802932d0bb627
+WARNING: No release found for *********/jenkins-x-quickstart-liberty and tag v1.0.48 so creating a new release
+Updated the release information at https://github.com/*********/jenkins-x-quickstart-liberty/releases/tag/v1.0.48
+generated: /workspace/source/charts/jenkins-x-quickstart-liberty/templates/release.yaml
+Created Release jenkins-x-quickstart-liberty-1-0-48 resource in namespace **
+Updating PipelineActivity *********-jenkins-x-quickstart-liberty-master-8 with version 1.0.48
+Updated PipelineActivities *********-jenkins-x-quickstart-liberty-master-8 with release notes URL: https://github.com/*********/jenkins-x-quickstart-liberty/releases/tag/v1.0.48
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file jenkins-x-quickstart-liberty-1.0.48.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32msdaschner-jenkins-x-quickstart-gp4b8-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app jenkins-x-quickstart-liberty version 1.0.48 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-ladylove-staging/pull/6
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-ladylove-staging/pull/6 ref c632c3d576b42b0ac916ad04230ac8b4d0773372 Could not find a status for repository *********/environment-ladylove-staging with ref c632c3d576b42b0ac916ad04230ac8b4d0773372
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-ladylove-staging/pull/6 ref c632c3d576b42b0ac916ad04230ac8b4d0773372 Could not find a status for repository *********/environment-ladylove-staging with ref c632c3d576b42b0ac916ad04230ac8b4d0773372
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-ladylove-staging/pull/6 ref c632c3d576b42b0ac916ad04230ac8b4d0773372 Could not find a status for repository *********/environment-ladylove-staging with ref c632c3d576b42b0ac916ad04230ac8b4d0773372
+Pull Request https://github.com/*********/environment-ladylove-staging/pull/6 is merged at sha 79993e9d80c87be23c5c091b9827898a7327ddf8
+Pull Request merged but we are not waiting for the update pipeline to complete!
