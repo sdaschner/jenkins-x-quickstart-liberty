@@ -43,46 +43,25 @@ upserted Pipeline *********-jenkins-x-quickstart-jbt2l-4
 created PipelineRun *********-jenkins-x-quickstart-jbt2l-4
 created PipelineStructure *********-jenkins-x-quickstart-jbt2l-4
 
-waiting for stage [32mbuild[0m : container [32mstep-credential-initializer-t2x8f[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-credential-initializer-t2x8f[0m
 {"level":"warn","ts":1567764395.4705327,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567764395.4708312,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-
-waiting for stage [32mbuild[0m : container [32mstep-working-dir-initializer-pwcpq[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-working-dir-initializer-pwcpq[0m
 {"level":"warn","ts":1567764395.874513,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764395.878137,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
-waiting for stage [32mbuild[0m : container [32mstep-place-tools[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-place-tools[0m
-
-waiting for stage [32mbuild[0m : container [32mstep-git-source-sdaschner-jenkins-x-quickstart-px6qf[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-px6qf[0m
 {"level":"warn","ts":1567764404.1742969,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567764407.700719,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty.git @ v1.0.43 in path /workspace/source"}
 
-waiting for stage [32mbuild[0m : container [32mstep-git-merge[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:899d4ac4411442707f5413869cac48d62298f3ec
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-waiting for stage [32mbuild[0m : container [32mstep-next-version[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-next-version[0m
-
-waiting for stage [32mbuild[0m : container [32mstep-set-version[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-set-version[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
@@ -108,17 +87,11 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] ------------------------------------------------------------------------
 [0m[0m
 
-waiting for stage [32mbuild[0m : container [32mstep-tag-version[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-tag-version[0m
 Updating chart version in charts/jenkins-x-quickstart-liberty/Chart.yaml to 1.0.44
 Updating repository in charts/jenkins-x-quickstart-liberty/values.yaml to 10.103.112.139:5000/*********/jenkins-x-quickstart-liberty
 Updating tag in charts/jenkins-x-quickstart-liberty/values.yaml to 1.0.44
 Tag v1.0.44 created and pushed to remote origin
-
-waiting for stage [32mbuild[0m : container [32mstep-mvn-deploy[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-mvn-deploy[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
@@ -169,20 +142,11 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] Finished at: 2019-09-06T10:07:32Z
 [INFO] ------------------------------------------------------------------------
 
-waiting for stage [32mbuild[0m : container [32mstep-mvn-liberty-integration-test[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-mvn-liberty-integration-test[0m
 doing integration test
 
-waiting for stage [32mbuild[0m : container [32mstep-skaffold-version[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-skaffold-version[0m
 v0.31.0
-
-waiting for stage [32mbuild[0m : container [32mstep-container-build[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-container-build[0m
 time="2019-09-06T10:07:37Z" level=warning msg="config version (skaffold/v1beta2) out of date: upgrading to latest (skaffold/v1beta11)"
@@ -242,61 +206,34 @@ Starting test...
 Test complete in 4.074µs
 Complete in 569.408038ms
 
-waiting for stage [32mbuild[0m : container [32mstep-post-build[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
-
-waiting for stage [32mbuild[0m : container [32mstep-source-mkdir-sdaschner-jenkins-x-quickstart-qnw7q[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-source-mkdir-sdaschner-jenkins-x-quickstart-qnw7q[0m
 {"level":"warn","ts":1567764460.075317,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764460.0827632,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/build/workspace\""}
 
-waiting for stage [32mbuild[0m : container [32mstep-source-copy-sdaschner-jenkins-x-quickstart-dcrcl[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mbuild[0m and container [32mstep-source-copy-sdaschner-jenkins-x-quickstart-dcrcl[0m
 {"level":"warn","ts":1567764460.376358,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764460.5864623,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/build/workspace\""}
-
-waiting for stage [32mpromote[0m : container [32mstep-credential-initializer-szp7n[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-credential-initializer-szp7n[0m
 {"level":"warn","ts":1567764465.547621,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567764465.5485265,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-waiting for stage [32mpromote[0m : container [32mstep-working-dir-initializer-mfvgr[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-working-dir-initializer-mfvgr[0m
 {"level":"warn","ts":1567764466.0780642,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764466.0943894,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/jenkins-x-quickstart-liberty\""}
 
-waiting for stage [32mpromote[0m : container [32mstep-place-tools[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-place-tools[0m
-
-waiting for stage [32mpromote[0m : container [32mstep-create-dir-workspace-gv262[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-create-dir-workspace-gv262[0m
 {"level":"warn","ts":1567764472.2685802,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764472.275884,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
-waiting for stage [32mpromote[0m : container [32mstep-source-copy-workspace-98cv9[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-source-copy-workspace-98cv9[0m
 {"level":"warn","ts":1567764472.5066726,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764472.5681775,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /pvc/build/workspace/. /workspace/source\""}
-
-waiting for stage [32mpromote[0m : container [32mstep-changelog[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-changelog[0m
 Converted /workspace/source/charts/jenkins-x-quickstart-liberty to an unshallow repository
@@ -308,9 +245,6 @@ Created Release jenkins-x-quickstart-liberty-1-0-44 resource in namespace **
 Updating PipelineActivity *********-jenkins-x-quickstart-liberty-master-4 with version 1.0.44
 Updated PipelineActivities *********-jenkins-x-quickstart-liberty-master-4 with release notes URL: https://github.com/*********/jenkins-x-quickstart-liberty/releases/tag/v1.0.44
 
-waiting for stage [32mpromote[0m : container [32mstep-helm-release[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
@@ -321,9 +255,6 @@ WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenk
 Uploading chart file jenkins-x-quickstart-liberty-1.0.44.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-waiting for stage [32mpromote[0m : container [32mstep-jx-promote[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 Promoting app jenkins-x-quickstart-liberty version 1.0.44 to namespace **-staging
@@ -333,61 +264,34 @@ Pull Request https://github.com/*********/environment-ladylove-staging/pull/3 is
 Pull Request merged but we are not waiting for the update pipeline to complete!
 WARNING: Could not find the service URL in namespace **-staging for names jenkins-x-quickstart-liberty, **-jenkins-x-quickstart-liberty, **-staging-jenkins-x-quickstart-liberty
 
-waiting for stage [32mpromote[0m : container [32mstep-wait-deployment[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-wait-deployment[0m
 waiting for promotion to be fully rolled-out
-
-waiting for stage [32mpromote[0m : container [32mstep-source-mkdir-sdaschner-jenkins-x-quickstart-d687s[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-source-mkdir-sdaschner-jenkins-x-quickstart-d687s[0m
 {"level":"warn","ts":1567764550.0177028,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764550.0242581,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/promote/workspace\""}
 
-waiting for stage [32mpromote[0m : container [32mstep-source-copy-sdaschner-jenkins-x-quickstart-l4cm4[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32mpromote[0m and container [32mstep-source-copy-sdaschner-jenkins-x-quickstart-l4cm4[0m
 {"level":"warn","ts":1567764550.2569647,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764550.3532119,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/promote/workspace\""}
-
-waiting for stage [32msystem-test[0m : container [32mstep-credential-initializer-n7nrh[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-credential-initializer-n7nrh[0m
 {"level":"warn","ts":1567764553.125001,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567764553.1255178,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-waiting for stage [32msystem-test[0m : container [32mstep-working-dir-initializer-kt9w5[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-working-dir-initializer-kt9w5[0m
 {"level":"warn","ts":1567764554.254674,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764554.2560203,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
-waiting for stage [32msystem-test[0m : container [32mstep-place-tools[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-place-tools[0m
-
-waiting for stage [32msystem-test[0m : container [32mstep-create-dir-workspace-tng94[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-create-dir-workspace-tng94[0m
 {"level":"warn","ts":1567764559.548418,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764559.5504851,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
-waiting for stage [32msystem-test[0m : container [32mstep-source-copy-workspace-bmxcc[0m to start...
-
-
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-source-copy-workspace-bmxcc[0m
 {"level":"warn","ts":1567764559.8212507,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
 {"level":"info","ts":1567764559.9121203,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /pvc/promote/workspace/. /workspace/source\""}
-
-waiting for stage [32msystem-test[0m : container [32mstep-mvn-liberty-integration-test[0m to start...
-
 
 Showing logs for build [32mmeta-sdaschner-jenkins-x-quicks-mlx2l-4[0m stage [32msystem-test[0m and container [32mstep-mvn-liberty-integration-test[0m
 doing system test
